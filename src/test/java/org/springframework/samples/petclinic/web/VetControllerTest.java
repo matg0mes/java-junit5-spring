@@ -62,6 +62,7 @@ class VetControllerTest {
 
         //then
         then(clinicService).should().findVets();
+        then(model).shouldHaveZeroInteractions();
         assertThat(result.getVetList()).isEqualTo(vetList);
         assertThat(result.getVetList()).hasSize(1);
     }
